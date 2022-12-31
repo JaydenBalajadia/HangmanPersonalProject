@@ -1,0 +1,226 @@
+@import url('https://fonts.cdnfonts.com/css/bariol-bold');
+
+body { 
+    background-color: #c9af98;
+}
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Bariol Bold', sans-serif;
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 2px #a18c7a;
+}
+
+.genre {
+    text-align: center;
+    text-size-adjust: auto;
+    font-family: 'Bariol Bold', sans-serif;
+    margin-bottom: 5%;
+    color: white;
+    text-shadow: 2px 2px #a18c7a;
+}
+
+.genre button { 
+    background-color: #6B7A8F;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.15s;
+    font-family: 'Bariol Bold', sans-serif;
+    font-size: large;  
+    color: white;
+    box-shadow: 4px 4px #a18c7a;
+}
+
+.genre button:hover { 
+    transition: 0.15s;
+    opacity: 0.5;
+    
+}
+
+.genre button:disabled { 
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+.genre button:active { 
+    transition: 100ms;
+    opacity: 0.4; 
+    transform: translateY(4px); 
+}
+
+.vict { 
+    position: static;
+    text-align: center;
+    font-family: 'Bariol Bold', sans-serif;
+    font-size: 30px; 
+    color: white;
+    text-shadow: 2px 2px #546070;
+}
+
+.pattern { 
+    transition: 100ms;
+    position: static;
+    text-align: center;
+    font-family: 'Bariol Bold', sans-serif;
+    font-size: 40px;
+    margin: 0 auto; 
+    margin-right: 10px;
+    margin-top: 20%;
+    color: white;
+    text-shadow: 2px 2px #546070;
+}
+
+.word { 
+    text-align: center;
+    font-family: 'Bariol Bold', sans-serif; 
+    font-size: 20px;
+    margin-top: 10%;
+    color: white;
+    text-shadow: 2px 2px #546070;
+}
+
+.container { 
+    font-size: 16px; 
+    background-color: #6B7A8F; 
+    width: 90vw; 
+    max-width: 34em;
+    height: 300px;
+    position: relative;
+    transform: translate(-50%, 0%); 
+    top: 50%; 
+    left: 50%;
+    padding: 3em;  
+    border-radius: 0.7em;
+    box-shadow:8px 8px #a18c7a; 
+}
+
+.btn-group1 button {
+    margin-top: 10px;
+    background-color: #6B7A8F;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.15s;
+    font-family: 'Bariol Bold', sans-serif;
+    font-size: large;
+    color: white;
+    box-shadow: 4px 4px #a18c7a;
+    text-shadow: 2px 2px #546070;
+}
+
+.btn-group1 button:hover {
+    opacity: 0.5;
+}
+
+.btn-group1 button:active {
+    opacity: 0.4;
+    transform: translateY(4px);
+    transition: 100ms;
+}
+
+.btn-group1 button:disabled { 
+    opacity: 0.3;
+    background-color: white;
+    box-shadow: none;
+    transition: 100ms;
+    text-shadow: none;
+}
+
+.btn-group1 {
+    text-align: center;
+    position: relative;
+    margin-top: 5%;
+    
+}
+
+.btn-group2 button {
+    margin-top: 10px;
+    background-color: #6B7A8F;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.15s;
+    font-family: 'Bariol Bold', sans-serif;
+    font-size: large;
+    color: white;
+    color: white;
+    box-shadow: 5px 5px #a18c7a;
+    text-shadow: 2px 2px #546070;
+}
+
+.btn-group2 button:hover {
+    opacity: 0.5;
+}
+
+.btn-group2 button:active {
+    opacity: 0.4;
+    transform: translateY(4px);
+    transition: 100ms;
+}
+
+.btn-group2 button:disabled { 
+    opacity: 0.3;
+    background-color: white;
+    box-shadow: none;
+    transition: 100ms;
+    text-shadow: none;
+}
+
+.btn-group2 {
+    text-align: center;
+}
+
+.reset { 
+    text-align: center;
+    margin: auto;
+    transform: translate(0, 140%);
+}
+
+.reset:hover { 
+    cursor:pointer;
+}
+
+.reset button {  
+    background-color: #6B7A8F;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.15s;
+    font-family: 'Bariol Bold', sans-serif;
+    box-shadow: 3px 3px #546070;
+    color: white;
+    border-width: 2px;
+}
+
+.reset button:hover { 
+    opacity: 0.5; 
+} 
+
+.reset button:active { 
+    opacity: 0.4;
+    transition: 100ms;
+    transform: translateY(4px); 
+}
+
+#cat1 { 
+    text-shadow: 2px 2px #546070;
+}
+
+#cat2 { 
+    text-shadow: 2px 2px #546070;
+}
+
+#cat3 { 
+    text-shadow: 2px 2px #546070;
+}

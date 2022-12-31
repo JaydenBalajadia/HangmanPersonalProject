@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="projectstyle.css" />
+  </head>
+  <header>
+    <h1>Welcome to Hangman!</h1>
+  </header>
+
+  <body>
+    <div id="genre" class="genre">
+      <h2>Choose a Category:</h2>
+      <button
+        id="cat1"
+        onclick="unclearBtns(); disGenreBtn('cat1'); getCategory('cat1')"
+      >
+        Cars
+      </button>
+      <button
+        id="cat2"
+        onclick="unclearBtns(); disGenreBtn('cat2'); getCategory('cat2')"
+      >
+        Animals
+      </button>
+      <button
+        id="cat3"
+        onclick="unclearBtns(); disGenreBtn('cat3'); getCategory('cat3')"
+      >
+        Food
+      </button>
+    </div>
+    <div class="container">
+      <div id="vict" class="vict"></div>
+      <div id="reset" class="reset"></div>
+      <div id="word" class="word"></div>
+      <div id="pattern" class="pattern"></div>
+    </div>
+    <div id="btn-group1" class="btn-group1">
+      <button id="btnA" onclick="getID('a')">A</button>
+      <button id="btnB" onclick="getID('b')">B</button>
+      <button id="btnC" onclick="getID('c')">C</button>
+      <button id="btnD" onclick="getID('d')">D</button>
+      <button id="btnE" onclick="getID('e')">E</button>
+      <button id="btnF" onclick="getID('f')">F</button>
+      <button id="btnG" onclick="getID('g')">G</button>
+      <button id="btnH" onclick="getID('h')">H</button>
+      <button id="btnI" onclick="getID('i')">I</button>
+      <button id="btnJ" onclick="getID('j')">J</button>
+      <button id="btnK" onclick="getID('k')">K</button>
+      <button id="btnL" onclick="getID('l')">L</button>
+      <button id="btnM" onclick="getID('m')">M</button>
+    </div>
+    <div id="btn-group2" class="btn-group2">
+      <button id="btnN" onclick="getID('n')">N</button>
+      <button id="btnO" onclick="getID('o')">O</button>
+      <button id="btnP" onclick="getID('p')">P</button>
+      <button id="btnQ" onclick="getID('q')">Q</button>
+      <button id="btnR" onclick="getID('r')">R</button>
+      <button id="btnS" onclick="getID('s')">S</button>
+      <button id="btnT" onclick="getID('t')">T</button>
+      <button id="btnU" onclick="getID('u')">U</button>
+      <button id="btnV" onclick="getID('v')">V</button>
+      <button id="btnW" onclick="getID('w')">W</button>
+      <button id="btnX" onclick="getID('x')">X</button>
+      <button id="btnY" onclick="getID('y')">Y</button>
+      <button id="btnZ" onclick="getID('z')">Z</button>
+    </div>
+    <script src="projectscript.js"></script>
+  </body>
+</html>
