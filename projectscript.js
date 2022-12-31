@@ -40,25 +40,25 @@ function getCategory(category) {
         randWord = animals[Math.floor(Math.random() * animals.length)];
         printPattern(setPattern(randWord));  
     } else { 
-        let food = ["Anchovies", "Asparagus", "Avocados", "Alfredo sauce", "Arugula", "Almonds", "Apples",  "Bacon", 
+        let food = ["Anchovies", "Asparagus", "Avocados", "Alfredo", "Arugula", "Almonds", "Apples",  "Bacon", 
                     "Bagels", "Bananas", "Barbecue", "Barley", "Basil", "Beans", "Beef", "Beets", "Blackberries", "Blueberries", 
                     "Bread", "Broccoli", "Burgers", "Cabbage", "Cake", "Calzones", "Cheese", "Chicken", "Chili", "Coconut", "Cod", 
-                    "Coffee", "Collards", "Cookies", "Crepes", "Curry","Daikon", "Dairy", "Dal", "Danishes", "Dates", "Dill", "Dosa", 
+                    "Coffee", "Collards", "Cookies", "Crepes", "Curry", "Daikon", "Dairy", "Dal", "Danishes", "Dates", "Dill", "Dosa", 
                     "Doubles", "Doughnuts", "Duck", "Duff", "Dumplings", "Durian", "Eclairs", "Edamame", "Eel", "Eggnog", "Eggplant", 
                     "Eggrolls", "Eggs", "Empanadas", "Enchiladas", "Escargot", "Espresso", "Falafel", "Fennel", "Figs", "Fish", "Frankfurters", 
-                    "French Fries", "Frittatas", "Fritters", "Frogs", "Fruit", "Fruitcakes", "Fungi", "Goose", "Gooseberries", "Graham Crackers", 
-                    "Granola", "Grapes", "Gravy", "Guacamole", "Gumbo", "Gyoza", "Gyros", "Ham", "Hamburger", "Hash Browns", "Herring", "Hoisin Sauce", 
-                    "Honey", "Honeydew", "Horseradish", "Hot Dogs", "Hot Sauce", "Huckleberries", "Hummus", "Ice", "Ice Cream", "Iceberg Lettuce",  
-                    "Inarizushi", "Italian Sausage", "Jackfruit", "Jalapeno", "Jam", "Jambalaya",  "Jelly", "Jerk Chicken", "Kaiser Roll", "Kale", 
-                    "Kasha", "Kelp", "Kimchi", "Kombucha", "Lard", "Lasagna", "Lemon", "Lima Beans", "Limes", "Lingonberries", "Liver", "Lo Mein", 
-                    "Lollipop", "Lutefisk", "Macaroon", "Mango",  "Maple Syrup", "Margarine", "Mayonnaise", "Melon", "Millet", "Mochi", "Mulberries", 
-                    "Mustard", "Naan", "Nachos", "Natto", "Navy Beans", "Nectarines",  "Noodles", "Nori", "Nougat", "Nuts", "Oatmeal", "Octopus", 
-                    "Oil", "Okra", "Olives", "Onion", "Oranges", "Oregano", "Oysters", "Pad Thai", "Pears", "Peas", "Pecans", "Pepperoni", "Peppers", 
+                    "Fries", "Frittatas", "Fritters", "Frogs", "Fruit", "Fruitcakes", "Fungi", "Goose", "Gooseberries", 
+                    "Granola", "Grapes", "Gravy", "Guacamole", "Gumbo", "Gyoza", "Gyros", "Ham", "Hamburger", "Herring", 
+                    "Honey", "Honeydew", "Horseradish", "Huckleberries", "Hummus", "Ice", "Lettuce",  
+                    "Inarizushi", "Jackfruit", "Jalapeno", "Jam", "Jambalaya",  "Jelly", "Jerky", "Kale", 
+                    "Kasha", "Kelp", "Kimchi", "Kombucha", "Lard", "Lasagna", "Lemon", "Limes", "Lingonberries", "Liver", 
+                    "Lollipop", "Lutefisk", "Macaroon", "Mango", "Margarine", "Mayonnaise", "Melon", "Millet", "Mochi", "Mulberries", 
+                    "Mustard", "Naan", "Nachos", "Natto", "Nectarines",  "Noodles", "Nori", "Nougat", "Nuts", "Oatmeal", "Octopus", 
+                    "Oil", "Okra", "Olives", "Onion", "Oranges", "Oregano", "Oysters", "Pears", "Peas", "Pecans", "Pepperoni", "Peppers", 
                     "Pie", "Poi", "Pork", "Pumpkins", "Quail", "Quesadillas", "Queso", "Quinoa", "Radishes", "Raisins", "Ramen", "Raspberries", "Ravioli", 
-                    "Relish", "Rhubarb", "Rice", "Rigatoni", "Romaine", "Rye Bread", "Salami", "Sesame Seeds", "Sorbet", "Sorghum", "Soybeans", 
+                    "Relish", "Rhubarb", "Rice", "Rigatoni", "Romaine", "Salami", "Sorbet", "Sorghum", "Soybeans", 
                     "Spaghetti", "Spinach", "Squash", "Sugar", "Sukiyaki", "Tacos", "Tempura", "Tiramisu", "Tofu", "Tomatoes", "Tortellini", 
                     "Truffles", "Tuna", "Turnips", "Ube", "Udon", "Unagi", "Vanilla", "Venison", "Vermicelli", "Vinegar", "Wafers", "Waffles", 
-                    "Walnuts", "Wasabi", "Watermelon", "Wheat", "Wine", "Wontons", "Yakitori", "Yams", "Yeast", "Yogurt", "Yorkshire Pudding", "Zucchini"]; 
+                    "Walnuts", "Wasabi", "Watermelon", "Wheat", "Wine", "Wontons", "Yakitori", "Yams", "Yeast", "Yogurt", "Zucchini"]; 
         randWord = food[Math.floor(Math.random() * food.length)]; 
         printPattern(setPattern(randWord));  
     }
@@ -134,7 +134,7 @@ function correctChars(guess) {
     }
 }
 
-// Disables buttons 
+// Disables letter buttons 
 function clearBtns() { 
     for (let i = 0; i < 26; i++) { 
         let alpha = String.fromCharCode(i + 65).toUpperCase();
@@ -143,7 +143,7 @@ function clearBtns() {
     }
 }
 
-// Enables buttons (assumming they were previously disabled)
+// Enables letter buttons (assumming they were previously disabled)
 function unclearBtns() { 
     for (let i = 0; i < 26; i++) { 
         let alpha = String.fromCharCode(i + 65).toUpperCase();
@@ -160,6 +160,7 @@ function setPattern(word) {
     return randStr; 
 }
 
+// Prints the pattern to display to the screen
 function printPattern(patt) { 
     document.getElementById("pattern").innerHTML = "";
     for (let i = 0; i < patt.length; i++) { 
@@ -167,6 +168,7 @@ function printPattern(patt) {
     }
 }
 
+// Disables category buttons
 function disGenreBtn(elemD) { 
     document.querySelector("#" + elemD).disabled = true; 
     document.getElementById(elemD).style.opacity = 0.3;
@@ -175,10 +177,11 @@ function disGenreBtn(elemD) {
     }
 }
 
+// Generates the reset button to restart the game
 function genResetButton() { 
     var div = document.getElementById("reset"); 
     var button = document.createElement("button"); 
-    var text = document.createTextNode("Reset Game"); 
+    var text = document.createTextNode("Restart Game"); 
     button.appendChild(text); 
     div.appendChild(button); 
     button.addEventListener("click", () => { 
