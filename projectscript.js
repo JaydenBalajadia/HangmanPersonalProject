@@ -1,4 +1,5 @@
 clearBtns(); 
+document.querySelector("#hint").disabled = true;
 var guessCount = 7;
 var randStr = [];
 var randWord = ""
@@ -63,6 +64,7 @@ function getCategory(category) {
         printPattern(setPattern(randWord));  
     }
     document.getElementById("vict").innerHTML = "Guesses left: " + guessCount; 
+    document.querySelector("#hint").disabled = false; 
     document.addEventListener("keypress", (event) => {
         getID(event.key);
     })
@@ -124,6 +126,9 @@ function correctChars(guess) {
     }
     if (count == 0) { 
         guessCount--;
+        if (guessCount == 1) { 
+            document.querySelector("#hint").disabled = true; 
+        }
         document.getElementById("vict").innerHTML = "Guesses left: " + guessCount;
     }
     if (guessCount == 0) { 
@@ -187,4 +192,22 @@ function genResetButton() {
     button.addEventListener("click", () => { 
         window.location.reload();
     });
+}
+
+function getHint() {
+    if (guessCount > 1) { 
+        let cont = 0; 
+        while (cont == 0) {
+            let randLetter = randWord.charAt(Math.floor(Math.random() * randWord.length));
+            console.log(randLetter); 
+            if (!randStr.includes(randLetter)) { 
+                guessCount -= 1; 
+                document.getElementById("vict").innerHTML = "Guesses Left: " + guessCount; 
+                document.querySelector("#btn" + randLetter.toUpperCase()).disabled = true;
+                getID(randLetter); 
+                document.querySelector("#hint").disabled = true;  
+                cont++; 
+            } 
+        }
+    }   
 }
