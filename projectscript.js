@@ -84,10 +84,17 @@ function getID(ltr) {
 
 // Checks if the letter is correct
 function ifContains(ltr) {
+    let temp = 0;
     for (let i = 0; i < randWord.length; i++) {
         if (ltr.toUpperCase() == randWord.charAt(i).toUpperCase()) {
             randStr[i] = ltr;
+            temp++;
         }
+    } 
+    if (temp > 0) { 
+        document.getElementById("btn" + ltr.toUpperCase()).style.backgroundColor = 'Green';
+    } else { 
+        document.getElementById("btn" + ltr.toUpperCase()).style.backgroundColor = 'Red';
     }
     makePattern(ltr);
 }
