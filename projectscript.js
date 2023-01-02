@@ -1,9 +1,8 @@
 clearBtns(); 
-document.querySelector("#hint").disabled = true;
 var guessCount = 7;
 var randStr = [];
 var randWord = ""
-
+var ltrsGuessed = []; 
 // Chooses category upon clicking the button
 function getCategory(category) { 
     if (category == "cat1") { 
@@ -66,16 +65,20 @@ function getCategory(category) {
     document.getElementById("vict").innerHTML = "Guesses left: " + guessCount; 
     document.querySelector("#hint").disabled = false; 
     document.addEventListener("keypress", (event) => {
-        getID(event.key);
+        let guess = event.key; 
+        if (!ltrsGuessed.includes(guess)) { 
+            ltrsGuessed.push(guess);  
+            getID(guess);
+        } else { 
+            window.alert("\"" + guess.toUpperCase() + "\"" + " was already guessed!"); 
+        }
     })
 }
 
 // Gets the letter that was chosen
 function getID(ltr) { 
-    let elemID = "btn" + ltr.toUpperCase(); 
-    let button = document.querySelector("#btn" + ltr.toUpperCase());
-    button.disabled = true;
-    document.getElementById(elemID).style.opacity = 0.3;
+    document.querySelector("#btn" + ltr.toUpperCase()).disabled = true; 
+    document.getElementById("btn" + ltr.toUpperCase()).style.opacity = 0.3;
     ifContains(ltr);
 }
 
@@ -97,6 +100,7 @@ function makePattern(ltr) {
             guessCount = 0; 
             document.getElementById("vict").innerHTML = "You win!"; 
             document.getElementById("word").innerHTML = " "; 
+            makeConfetti(); 
             genResetButton();
             clearBtns();
         } else {  
@@ -117,14 +121,15 @@ function isPatternEqual(randStr) {
 }
 
 // Counts the amount of characters the user got correct
-function correctChars(guess) { 
+function correctChars(guess) {
+    console.log(!document.getElementById("btn" + guess.toUpperCase()).disabled);  
     let count = 0; 
     for (let i = 0; i < randWord.length; i++) { 
         if (randWord.charAt(i).toUpperCase() == guess.toUpperCase()) { 
             count++;
         } 
-    }
-    if (count == 0) { 
+    } 
+    if (count == 0) {  
         guessCount--;
         if (guessCount == 1) { 
             document.querySelector("#hint").disabled = true; 
@@ -146,6 +151,7 @@ function clearBtns() {
         document.querySelector("#btn" + alpha).disabled = false;
         document.querySelector("#btn" + alpha).disabled = true; 
     }
+    document.querySelector("#hint").disabled = true; 
 }
 
 // Enables letter buttons (assumming they were previously disabled)
@@ -155,6 +161,7 @@ function unclearBtns() {
         document.querySelector("#btn" + alpha).disabled = true;
         document.querySelector("#btn" + alpha).disabled = false; 
     }
+    document.querySelector("#hint").disabled = false; 
 }
 
 // Creates the pattern to display to the user
@@ -201,7 +208,7 @@ function getHint() {
             let randLetter = randWord.charAt(Math.floor(Math.random() * randWord.length));
             console.log(randLetter); 
             if (!randStr.includes(randLetter)) { 
-                guessCount -= 1; 
+                guessCount--; 
                 document.getElementById("vict").innerHTML = "Guesses Left: " + guessCount; 
                 document.querySelector("#btn" + randLetter.toUpperCase()).disabled = true;
                 getID(randLetter); 
@@ -210,4 +217,9 @@ function getHint() {
             } 
         }
     }   
+}
+
+function makeConfetti() { 
+    const jsConfetti = new JSConfetti(); 
+    jsConfetti.addConfetti();
 }
