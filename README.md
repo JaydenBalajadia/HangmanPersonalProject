@@ -1,1 +1,1 @@
-# HangmanPersonalProject
+# WordGuesserPersonalProject
