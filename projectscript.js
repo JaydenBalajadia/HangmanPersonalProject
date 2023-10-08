@@ -62,7 +62,7 @@ function getCategory(category) {
         randWord = food[Math.floor(Math.random() * food.length)]; 
         printPattern(setPattern(randWord));  
     }
-    document.getElementById("vict").innerHTML = "Guesses left: " + guessCount; 
+    document.getElementById("vict").innerHTML = "Mistakes left: " + guessCount; 
     document.querySelector("#hint").disabled = false; 
     document.addEventListener("keypress", (event) => {
         let guess = event.key; 
@@ -216,7 +216,7 @@ function getHint() {
             console.log(randLetter); 
             if (!randStr.includes(randLetter)) { 
                 guessCount--; 
-                document.getElementById("vict").innerHTML = "Guesses Left: " + guessCount; 
+                document.getElementById("vict").innerHTML = "Mistakes Left: " + guessCount; 
                 document.querySelector("#btn" + randLetter.toUpperCase()).disabled = true;
                 getID(randLetter); 
                 document.querySelector("#hint").disabled = true;  

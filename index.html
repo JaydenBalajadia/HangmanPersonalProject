@@ -3,14 +3,19 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Word Guessing Game</title>
-    <link rel="stylesheet" href="projectstyle.css" />
+    <link rel="stylesheet" href="./dist/output.css">
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <style>
+      h1 {text-shadow: 3px 3px rgb(18, 24, 35);}
+      h2 {text-shadow: 2px 2px rgb(30 41 59);}
+      button {text-shadow: 2px 2px rgb(30 41 59);}
+    </style>
   </head>
   <header>
-    <h1>Welcome to Word Guesser!</h1>
+    <h1 class="text-4xl mt-10 text-center text-white font-mono font-extrabold">Welcome to Word Guesser!</h1>
   </header>
-  <body>
-    <div id="genre" class="genre">
+  <body class="bg-slate-800">
+    <div id="genre" class="text-2xl text-center text-white font-mono ">
       <h2>Choose a Category:</h2>
       <button
         id="cat1"
@@ -40,34 +45,36 @@
       <div id="reset" class="reset"></div>
     </div>
     <div id="btn-group1" class="btn-group1">
-      <button id="btnA" onclick="getID('a')">A</button>
-      <button id="btnB" onclick="getID('b')">B</button>
-      <button id="btnC" onclick="getID('c')">C</button>
-      <button id="btnD" onclick="getID('d')">D</button>
-      <button id="btnE" onclick="getID('e')">E</button>
-      <button id="btnF" onclick="getID('f')">F</button>
-      <button id="btnG" onclick="getID('g')">G</button>
-      <button id="btnH" onclick="getID('h')">H</button>
-      <button id="btnI" onclick="getID('i')">I</button>
-      <button id="btnJ" onclick="getID('j')">J</button>
-      <button id="btnK" onclick="getID('k')">K</button>
-      <button id="btnL" onclick="getID('l')">L</button>
-      <button id="btnM" onclick="getID('m')">M</button>
+      <button id="btnQ" onclick="getID('q')">A</button>
+      <button id="btnw" onclick="getID('w')">B</button>
+      <button id="btnE" onclick="getID('e')">C</button>
+      <button id="btnR" onclick="getID('r')">D</button>
+      <button id="btnT" onclick="getID('t')">E</button>
+      <button id="btnY" onclick="getID('y')">F</button>
+      <button id="btnU" onclick="getID('u')">G</button>
+      <button id="btnI" onclick="getID('i')">H</button>
+      <button id="btnO" onclick="getID('o')">I</button>
+      <button id="btnP" onclick="getID('p')">J</button>
     </div>
     <div id="btn-group2" class="btn-group2">
-      <button id="btnN" onclick="getID('n')">N</button>
-      <button id="btnO" onclick="getID('o')">O</button>
-      <button id="btnP" onclick="getID('p')">P</button>
-      <button id="btnQ" onclick="getID('q')">Q</button>
-      <button id="btnR" onclick="getID('r')">R</button>
-      <button id="btnS" onclick="getID('s')">S</button>
-      <button id="btnT" onclick="getID('t')">T</button>
-      <button id="btnU" onclick="getID('u')">U</button>
-      <button id="btnV" onclick="getID('v')">V</button>
-      <button id="btnW" onclick="getID('w')">W</button>
-      <button id="btnX" onclick="getID('x')">X</button>
-      <button id="btnY" onclick="getID('y')">Y</button>
-      <button id="btnZ" onclick="getID('z')">Z</button>
+      <button id="btnA" onclick="getID('a')">K</button>
+      <button id="btnS" onclick="getID('s')">L</button>
+      <button id="btnD" onclick="getID('d')">M</button>
+      <button id="btnF" onclick="getID('f')">N</button>
+      <button id="btnG" onclick="getID('g')">O</button>
+      <button id="btnH" onclick="getID('h')">P</button>
+      <button id="btnJ" onclick="getID('j')">Q</button>
+      <button id="btnK" onclick="getID('k')">R</button>
+      <button id="btnL" onclick="getID('l')">S</button>
+    </div>
+    <div id="btn-group3" class="btn-group3">
+      <button id="btnZ" onclick="getID('z')">T</button>
+      <button id="btnX" onclick="getID('x')">U</button>
+      <button id="btnC" onclick="getID('c')">V</button>
+      <button id="btnV" onclick="getID('v')">W</button>
+      <button id="btnB" onclick="getID('b')">X</button>
+      <button id="btnN" onclick="getID('n')">Y</button>
+      <button id="btnM" onclick="getID('m')">Z</button>
     </div>
     <script src="projectscript.js"></script>
   </body>
